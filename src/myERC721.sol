@@ -1,17 +1,16 @@
 pragma solidity ^0.5.6;
 
-import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v2.3.0/contracts/token/ERC721/ERC721.sol";
-import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v2.3.0/contracts/token/ERC721/ERC721Metadata.sol";
+import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v2.3.0/contracts/token/ERC721/ERC721Full.sol";
 import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v2.3.0/contracts/token/ERC721/ERC721Mintable.sol";
 
 
-contract MyERC721 is ERC721, ERC721Mintable, ERC721Metadata {
+contract MyERC721 is ERC721Full, ERC721Mintable {
     
     // base URI for token meta data
     string _baseURI = "https://raw.githubusercontent.com/bjoernwe/eth_my_erc721/master/res/";
     
     // Constructor with hard-coded name and symbol
-    constructor() public ERC721Metadata("CC", "CC") { }
+    constructor() public ERC721Full("CC", "CC") { }
     
     
     /**
