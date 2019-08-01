@@ -8,7 +8,7 @@ import "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/v2
 contract MyERC721 is ERC721, ERC721Mintable, ERC721Metadata {
     
     // base URI for token meta data
-    string _baseURI = "";
+    string _baseURI = "https://raw.githubusercontent.com/bjoernwe/eth_my_erc721/master/res/";
     
     // Constructor with hard-coded name and symbol
     constructor() public ERC721Metadata("CC", "CC") { }
